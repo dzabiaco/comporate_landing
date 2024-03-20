@@ -20,13 +20,13 @@ export default function About(){
                 <div className="row align-items-center">
                     <div className="col-lg-5 m-15px-tb">
                         <div className="about-me-img box-shadow">
-                            <Image src="/static/images/main.jpg" width="450" height="450"  title="" alt="Me"/>
-                                <div className="nav social-icon">
-                                    <Link href="#"><FontAwesomeIcon icon={faFacebookF} /></Link>
-                                    <Link href="#"><FontAwesomeIcon icon={faTwitter} /></Link>
-                                    <Link href="#"><FontAwesomeIcon icon={faInstagram} /></Link>
-                                    <Link href="#"><FontAwesomeIcon icon={faLinkedin} /></Link>
-                                </div>
+                            <Image src="/static/images/main_1.jpg" width="450" height="450"  title="" alt="Me"/>
+                                {/*<div className="nav social-icon">*/}
+                                {/*    <Link href="#"><FontAwesomeIcon icon={faFacebookF} /></Link>*/}
+                                {/*    <Link href="#"><FontAwesomeIcon icon={faTwitter} /></Link>*/}
+                                {/*    <Link href="#"><FontAwesomeIcon icon={faInstagram} /></Link>*/}
+                                {/*    <Link href="#"><FontAwesomeIcon icon={faLinkedin} /></Link>*/}
+                                {/*</div>*/}
                         </div>
                     </div>
                     <div className="col-lg-7 m-15px-tb">
@@ -41,40 +41,40 @@ export default function About(){
                             <div className="row about-list">
                                 <div className="col-md-6">
                                     <div className="media">
-                                        <label>Birthday</label>
-                                        <p>4th april 1991</p>
-                                    </div>
-                                    <div className="media">
-                                        <label>Age</label>
-                                        <p>22 Yr</p>
-                                    </div>
-                                    <div className="media">
                                         <label>Residence</label>
-                                        <p>Canada</p>
+                                        <p>Chisinau</p>
                                     </div>
-                                    <div className="media">
-                                        <label>Address</label>
-                                        <p>California, USA</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
                                     <div className="media">
                                         <label>E-mail</label>
-                                        <p>Lifarimadlenpsiholog@gmail.com</p>
+                                        <p><Link href="mailto:Lifarimadlenpsiholog@gmail.com">Lifarimadlenpsiholog@gmail.com</Link></p>
                                     </div>
                                     <div className="media">
                                         <label>Phone</label>
-                                        <p>820-885-3321</p>
+                                        <p><Link href="tel:+37360340323">+37360340323</Link></p>
                                     </div>
                                     <div className="media">
-                                        <label>Skype</label>
-                                        <p>skype.0404</p>
+                                        <label>Viber</label>
+                                        <p>+37360340323</p>
                                     </div>
                                     <div className="media">
-                                        <label>Freelance</label>
-                                        <p>Available</p>
+                                        <label>Telegram</label>
+                                        <p><Link href="https://t.me/MadlenCherry">Contact me</Link></p>
+                                    </div>
+                                    <div className="media">
+                                        <label>Whatsapp</label>
+                                        <p><Link href="https://api.whatsapp.com/send?phone=37360340323">Contact Me</Link></p>
                                     </div>
                                 </div>
+                                {/*<div className="col-md-6">*/}
+                                {/*    <div className="media">*/}
+                                {/*        <label>Skype</label>*/}
+                                {/*        <p>skype.0404</p>*/}
+                                {/*    </div>*/}
+                                {/*    <div className="media">*/}
+                                {/*        <label>Freelance</label>*/}
+                                {/*        <p>Available</p>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
                             </div>
                             <div className="btn-bar">
                                 <a className="m-btn m-btn-theme" href="#work">Download CV</a>

@@ -17,7 +17,7 @@ export default function Home() {
         <Header/>
         <HomeSection/>
         <About/>
-        <Skills/>
+        {/*<Skills/>*/}
         <Services/>
         <Testimonials/>
           {/*<Blog/>*/}

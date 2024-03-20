@@ -3,6 +3,7 @@
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useRef, useState} from "react";
+import Link from "next/link";
 
 export default function Contact() {
     const [success, setSuccess] = useState(false);
@@ -129,9 +130,12 @@ export default function Contact() {
                                 <FontAwesomeIcon icon={faPhone}/>
                             </div>
                             <div className="media-body">
-                                <h6 className="dark-color font-alt">Our Phone</h6>
-                                <p>Office: +004 44444 44444<br/>
-                                    Office: +004 44444 44444<br/></p>
+                                <h6 className="dark-color font-alt">My Phone</h6>
+                                <p>Phone: <Link href="tel:+37360340323">+37360340323</Link><br/>
+                                    Viber: +37360340323<br/>
+                                    Whatsapp: <Link href="https://api.whatsapp.com/send?phone=37360340323">Contact me</Link><br/>
+                                    Telegram: <Link href="https://t.me/MadlenCherry">Contact me</Link>
+                                </p>
                             </div>
                         </div>
                         <div className="contact-info media box-shadow">
@@ -140,8 +144,8 @@ export default function Contact() {
                                 <FontAwesomeIcon icon={faEnvelope}/>
                             </div>
                             <div className="media-body">
-                                <h6 className="dark-color font-alt">Our Email</h6>
-                                <p>info@domainname.com<br/>contact@domainname.com</p>
+                                <h6 className="dark-color font-alt">My Email</h6>
+                                <p><Link href="mailto:Lifarimadlenpsiholog@gmail.com">Lifarimadlenpsiholog@gmail.com</Link></p>
                             </div>
                         </div>
                     </div>

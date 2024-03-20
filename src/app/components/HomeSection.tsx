@@ -15,13 +15,13 @@ export default function HomeSection(){
                             <h2>I Am Passionate <span id="type-it">Psiholog</span></h2>
                             <p>Bună! Sunt Madlen, am 25 de ani și o dorință arzătoare de a schimba această lume spre bine!</p>
                             <div className="btn-bar go-to">
-                                <a className="m-btn m-btn-theme" href="#work">my work</a>
+                                <a className="m-btn m-btn-theme" href="#services">my services</a>
                                 <a className="m-btn m-btn-t-theme" href="#contactus">Hire Me</a>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <Image src="/static/images/main.jpg" width="400" height="400"  title="" alt="Me"/>
+                        <Image src="/static/images/main_1.jpg" width="400" height="200"  title="" alt="Me"/>
                     </div>
                 </div>
             </div>
