@@ -8,16 +8,16 @@ export default function Contact() {
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
 
-    const nameRef = useRef();
-    const emailRef = useRef();
-    const subjectRef = useRef();
-    const messageRef = useRef();
+    const nameRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const subjectRef = useRef<HTMLInputElement>(null);
+    const messageRef = useRef<HTMLTextAreaElement>(null);
 
     async function sendEmail() {
-        const name = (nameRef.current as HTMLInputElement).value;
-        const email = (emailRef.current as HTMLInputElement).value;
-        const subject = (subjectRef.current as HTMLInputElement).value;
-        const message = (messageRef.current as HTMLInputElement).value;
+        const name = (nameRef.current as unknown as HTMLInputElement).value;
+        const email = (emailRef.current as unknown  as HTMLInputElement).value;
+        const subject = (subjectRef.current as unknown  as HTMLInputElement).value;
+        const message = (messageRef.current as unknown  as HTMLInputElement).value;
 
         if (!name || !email || !subject || !message) {
             setError(true);
@@ -72,28 +72,28 @@ export default function Contact() {
                                     <div className="col-md-6">
                                         <div className="form-group">
                                             <input name="Name" id="name" placeholder="Name *" className="form-control"
-                                                   type="text" ref={nameRef as string}/>
+                                                   type="text" ref={nameRef}/>
                                             <span className="input-focus-effect theme-bg"></span>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-group">
                                             <input name="Email" id="email" placeholder="Email *"
-                                                   className="form-control" type="email" ref={emailRef as string}/>
+                                                   className="form-control" type="email" ref={emailRef}/>
                                             <span className="input-focus-effect theme-bg"></span>
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group">
                                             <input name="Subject" id="subject" placeholder="Subject *"
-                                                   className="form-control" type="text" ref={subjectRef as string}/>
+                                                   className="form-control" type="text" ref={subjectRef}/>
                                             <span className="input-focus-effect theme-bg"></span>
                                         </div>
                                     </div>
                                     <div className="col-md-12">
                                         <div className="form-group">
-                                            <textarea name="message" id="message" placeholder="Your message *" rows="3"
-                                                      className="form-control" ref={messageRef as string}></textarea>
+                                            <textarea name="message" id="message" placeholder="Your message *"
+                                                      className="form-control" ref={messageRef}></textarea>
                                             <span className="input-focus-effect theme-bg"></span>
                                         </div>
                                     </div>

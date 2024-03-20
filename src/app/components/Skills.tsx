@@ -6,27 +6,22 @@ import {useEffect} from "react";
 
 export default function Skills(){
 
-useEffect(() => {
-    const handleScroll = () => {
-        document.querySelectorAll(".skill-bar .skill-bar-in").forEach((element: HTMLElement) => {
-            const bottomObject = element.offsetTop + element.offsetHeight;
-            const bottomWindow = window.scrollY + window.innerHeight;
-            const progressWidth = `${element.getAttribute('aria-valuenow')}%`;
+    useEffect(() => {
+        const handleScroll = () => {
+            document.querySelectorAll<HTMLElement>(".skill-bar .skill-bar-in") // QuerySelectorAll<Element>
+                .forEach((element: HTMLElement) => { // Explicitly set type to HTMLElement
+                    const bottomObject = element.offsetTop + element.offsetHeight;
+                    const bottomWindow = window.scrollY + window.innerHeight;
+                    const progressWidth = `${element.getAttribute('aria-valuenow')}%`;
+                });
+        };
 
-            if (bottomWindow > bottomObject) {
-                element.style.width = progressWidth;
-            }
-        });
-    };
+        window.addEventListener("scroll", handleScroll);
 
-    // Attach the event listener when the component mounts
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener when the component unmounts
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
-}, []);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
 
     return (
@@ -46,8 +41,8 @@ useEffect(() => {
                         <div className="skill-lt">
                             <h6 className="dark-color">HTML5</h6>
                             <div className="skill-bar">
-                                <div className="skill-bar-in theme-bg" role="progressbar" aria-valuenow="92"
-                                     aria-valuemin="0" aria-valuemax="100">
+                                <div className="skill-bar-in theme-bg" role="progressbar" aria-valuenow={92}
+                                     aria-valuemin={0} aria-valuemax={100}>
                                     <span>92%</span>
                                 </div>
                             </div>
@@ -56,8 +51,8 @@ useEffect(() => {
                         <div className="skill-lt">
                             <h6 className="dark-color">WordPress</h6>
                             <div className="skill-bar">
-                                <div className="skill-bar-in theme-bg" role="progressbar" aria-valuenow="72"
-                                     aria-valuemin="0" aria-valuemax="100">
+                                <div className="skill-bar-in theme-bg" role="progressbar" aria-valuenow={72}
+                                     aria-valuemin={0} aria-valuemax={100}>
                                     <span>75%</span>
                                 </div>
                             </div>
@@ -66,8 +61,8 @@ useEffect(() => {
                         <div className="skill-lt">
                             <h6 className="dark-color">Magento</h6>
                             <div className="skill-bar">
-                                <div className="skill-bar-in theme-bg" role="progressbar" aria-valuenow="86"
-                                     aria-valuemin="0" aria-valuemax="100">
+                                <div className="skill-bar-in theme-bg" role="progressbar" aria-valuenow={86}
+                                     aria-valuemin={0} aria-valuemax={100}>
                                     <span>86%</span>
                                 </div>
                             </div>
@@ -76,8 +71,8 @@ useEffect(() => {
                         <div className="skill-lt">
                             <h6 className="dark-color">UI/UX</h6>
                             <div className="skill-bar">
-                                <div className="skill-bar-in theme-bg" role="progressbar" aria-valuenow="88"
-                                     aria-valuemin="0" aria-valuemax="100">
+                                <div className="skill-bar-in theme-bg" role="progressbar" aria-valuenow={88}
+                                     aria-valuemin={0} aria-valuemax={100}>
                                     <span>88%</span>
                                 </div>
                             </div>

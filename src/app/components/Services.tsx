@@ -17,7 +17,7 @@ export default function Services(){
                         <div className="feature-box-1 box-shadow-lg">
                             <div className="icon">
                                 {/*<i className="icon-desktop"></i>*/}
-                               <Image src="/static/icons/psychology_1.png" className="mx-auto" width="64" height="64"/>
+                               <Image src="/static/icons/psychology_1.png" alt="Terapie" className="mx-auto" width="64" height="64"/>
                             </div>
                             <div className="feature-content">
                                 <h5>Terapie psihologică (individuală sau de grup)</h5>
@@ -31,7 +31,7 @@ export default function Services(){
                         <div className="feature-box-1 box-shadow-lg">
                             <div className="icon">
                                 {/*<i className="icon-pricetags"></i>*/}
-                                <Image src="/static/icons/fear.png" className="mx-auto" width="64" height="64"/>
+                                <Image src="/static/icons/fear.png" alt="Situatii de stress" className="mx-auto" width="64" height="64"/>
                             </div>
                             <div className="feature-content">
                                 <h5>Consiliere și suport în situații de stres</h5>
@@ -45,7 +45,7 @@ export default function Services(){
                         <div className="feature-box-1 box-shadow-lg">
                             <div className="icon">
                                 {/*<i className="icon-chat"></i>*/}
-                                <Image src="/static/icons/abuse.png" className="mx-auto" width="64" height="64"/>
+                                <Image src="/static/icons/abuse.png" alt="Rezolvare conflictelor" className="mx-auto" width="64" height="64"/>
                             </div>
                             <div className="feature-content">
                                 <h5>Ajutor în rezolvarea conflictelor (familiale, de muncă etc.)</h5>
@@ -59,7 +59,7 @@ export default function Services(){
                         <div className="feature-box-1 box-shadow-lg">
                             <div className="icon">
                                 {/*<i className="icon-mobile"></i>*/}
-                                <Image src="/static/icons/psychology.png" className="mx-auto" width="64" height="64"/>
+                                <Image src="/static/icons/psychology.png" alt="Autocunoastere" className="mx-auto" width="64" height="64"/>
                             </div>
                             <div className="feature-content">
                                 <h5>Dezvoltare personală și autocunoaștere</h5>
@@ -73,7 +73,7 @@ export default function Services(){
                         <div className="feature-box-1 box-shadow-lg">
                             <div className="icon">
                                 {/*<i className="icon-target"></i>*/}
-                                <Image src="/static/icons/classroom.png" className="mx-auto" width="64" height="64"/>
+                                <Image src="/static/icons/classroom.png" alt="Trainings" className="mx-auto" width="64" height="64"/>
                             </div>
                             <div className="feature-content">
                                 <h5>Traininguri în gestionarea emoțiilor și stresului</h5>
@@ -87,7 +87,7 @@ export default function Services(){
                         <div className="feature-box-1 box-shadow-lg">
                             <div className="icon">
                                 {/*<i className="icon-tools-2"></i>*/}
-                                <Image src="/static/icons/test.png" className="mx-auto" width="64" height="64"/>
+                                <Image src="/static/icons/test.png" alt="Testare" className="mx-auto" width="64" height="64"/>
                             </div>
                             <div className="feature-content">
                                 <h5>Testare psihologică și evaluare a personalității</h5>
