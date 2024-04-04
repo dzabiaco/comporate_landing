@@ -10,8 +10,6 @@ export async function POST(req: NextRequest) {
     // const message = req?.body?.message;
     const {email, name, message} = await req.json();
 
-    console.log("FROM BACKEND",{email, name, message});
-
     try {
         const transporter = nodemailer.createTransport({
             service: "gmail",
@@ -22,8 +20,8 @@ export async function POST(req: NextRequest) {
         });
 
         const mailOptions = {
-            from: process.env.NODEMAILER_EMAIL,
-            to: email,
+            from: email,
+            to: process.env.NODEMAILER_EMAIL,
             subject: "Message From Customer",
             text: message,
         };
