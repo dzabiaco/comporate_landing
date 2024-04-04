@@ -1,35 +1,33 @@
-import Image from "next/image";
-import {useTranslations} from "next-intl";
 
 
 export default function HomeSection(){
     return (
-        <section id="home" className="home-banner-01">
-            <div className="container">
-                <div className="row full-screen align-items-center p-100px-tb">
-                    <div className="col-md-6">
-                        <div className="ht-text">
-                            <h6>Hello there...</h6>
-                            <h1>Madlen Lifari</h1>
-                            {/* <h2>I Am Passionate <span id="type-it"></span></h2> */}
-                            <h2>I Am Passionate <span id="type-it">Psiholog</span></h2>
-                            <p>Bună! Sunt Madlen, am 25 de ani și o dorință arzătoare de a schimba această lume spre bine!</p>
-                            <div className="btn-bar go-to">
-                                <a className="m-btn m-btn-theme" href="#services">my services</a>
-                                <a className="m-btn m-btn-t-theme" href="#contactus">Hire Me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <Image src="/static/images/main_1.jpg" width="400" height="200"  title="" alt="Me"/>
-                    </div>
-                </div>
+        <header id="home" className="header" style={{ backgroundImage: 'linear-gradient(150deg, #fdfbfb 0%, #eee 100%)' }}>
+      <div className="container">
+        <div className="row align-items-center h-100">
+
+          <div className="col-lg-5">
+            <h1 className="display-4"><strong>Comporate</strong>;<br />Where Work happens</h1>
+            <p className="lead mt-5">Whatever work means for you, Comporate brings all the pieces and people you need together so you can actually get things done.</p>
+
+            <hr className="w-10 ml-0 my-7" />
+
+            <p className="gap-xy">
+              <a className="btn btn-lg btn-round btn-primary mw-200" href="#section-pricing">Get Started</a>
+              <a className="btn btn-lg btn-round btn-outline-primary mw-200" href="#section-features">Features</a>
+            </p>
+          </div>
+
+          <div className="col-lg-6 ml-auto">
+            <div className="video-wrapper ratio-16x9 rounded shadow-6 mt-8 mt-lg-0">
+              <div className="poster" style={{ backgroundImage: 'url(./static/assets/img/preview/shot-1.png)' }}></div>
+              {/* <button className="btn btn-circle btn-lg btn-info"><i className="fa fa-play"></i></button> */}
+              {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/M5S_JBRjd1s?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe> */}
             </div>
-            <div className="go-to go-to-next">
-                <a href="#about">
-                    <span></span>
-                </a>
-            </div>
-        </section>
+          </div>
+
+        </div>
+      </div>
+    </header>
     );
 }

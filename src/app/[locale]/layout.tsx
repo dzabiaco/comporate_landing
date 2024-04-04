@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import {NextIntlClientProvider, useMessages} from 'next-intl';
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,17 +23,20 @@ export default function RootLayout({
 
     <html lang={locale}>
       <head>
-        <link rel="stylesheet" href="../../../static/plugin/bootstrap.min.css"/>
-        <link rel="stylesheet" href="../../../static/plugin/style.css"/>
-        <link rel="stylesheet" href="../../../static/plugin/themify-icons.css"/>
-        <link rel="stylesheet" href="../../../static/plugin/owl.carousel.min.css"/>
-        <link rel="stylesheet" href="../../../static/plugin/magnific-popup.css"/>
-        <link rel="stylesheet" href="../../../static/plugin/master.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+      {/* <link rel="stylesheet" href="../../../static/plugin/bootstrap.min.css"/> */}
+      <link rel="stylesheet" href="../../static/assets/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="../static/assets/css/page.min.css"/>
+      <link rel="stylesheet" href="../static/assets/css/style.css"/>
+      
       </head>
       <body className={inter.className}>
       <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
       </NextIntlClientProvider>
+      <Script src="../static/assets/js/jquery-3.7.1.min.js"/>
+      <Script src="../static/assets/js/bootstrap.bundle.min.js"/>
+      <Script src="../static/assets/js/script.js"/>
       </body>
     </html>
   );

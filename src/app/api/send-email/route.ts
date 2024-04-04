@@ -8,7 +8,9 @@ export async function POST(req: NextRequest) {
     // const name = req?.body?.name;
     // const subject = req?.body?.subject;
     // const message = req?.body?.message;
-    const {email, subject, message} = await req.json();
+    const {email, name, message} = await req.json();
+
+    console.log("FROM BACKEND",{email, name, message});
 
     try {
         const transporter = nodemailer.createTransport({
@@ -22,7 +24,7 @@ export async function POST(req: NextRequest) {
         const mailOptions = {
             from: process.env.NODEMAILER_EMAIL,
             to: email,
-            subject: subject,
+            subject: "Message From Customer",
             text: message,
         };
 

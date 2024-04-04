@@ -1,28 +1,35 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Header from "@/app/components/Header";
-import HomeSection from "@/app/components/HomeSection";
 import {Fragment} from "react";
 import {useTranslations} from "next-intl";
-import About from "@/app/components/About";
-import Skills from "@/app/components/Skills";
-import Services from "@/app/components/Services";
-import Testimonials from "@/app/components/Testimonials";
-import Blog from "@/app/components/Blog/Blog";
+import TheHeader from "@/app/components/TheHeader";
+import HomeSection from "@/app/components/HomeSection";
+import FeaturesSection from "@/app/components/FeaturesSection";
+import Benefits from "@/app/components/Benefits";
+import CTA from "@/app/components/CTA";
+import Pricing from "@/app/components/Pricing";
+import FAQ from "@/app/components/FAQ";
+import Subscribe from "@/app/components/Subscribe";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
+
 
 export default function Home() {
   return (
       <Fragment>
-        <Header/>
+        {/* <Header/> */}
+        <TheHeader/>
         <HomeSection/>
-        <About/>
-        {/*<Skills/>*/}
-        <Services/>
-        <Testimonials/>
-          {/*<Blog/>*/}
+        <main className="main-content">
+          <FeaturesSection/>
+          <Benefits/>
+          <CTA/>
+          <Pricing/>
+          <FAQ/>
+          <Subscribe/>
           <Contact/>
-          <Footer/>
+        </main>
+        <Footer/>
       </Fragment>
   );
 }
