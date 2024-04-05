@@ -36,7 +36,7 @@ export default function Contact() {
                 },
                 body: JSON.stringify({name, email, message})
             });
-            
+
 
             if(res.ok){
                 setShowAlert(true);
